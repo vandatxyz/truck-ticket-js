@@ -21,3 +21,19 @@ spring:
         format_sql: true
         use_sql_comments: true
     open-in-view: false   # optional
+
+  mail:
+    port: 456
+    host: host
+    password: password
+    username: username
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          ssl:
+            enable: true

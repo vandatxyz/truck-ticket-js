@@ -1,11 +1,12 @@
 package com.anoystick.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
+
+import java.util.List;
 
 @Data
 @Entity
@@ -14,5 +15,12 @@ import org.hibernate.annotations.DynamicUpdate;
 @DynamicUpdate
 public class OrderEntity {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    private int userId;
+
+    @ManyToMany(mappedBy = "orderList")
+    @ToString.Exclude
+    private List<ProductEntity> productList;
 }
