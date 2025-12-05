@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VIP Landing Page</title>
+   <link rel="stylesheet" th:href="@{/css/login.css}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="vip-page">
+
+<header class="header">
+    <div class="container">
+        <div class="header__logo">NYANO</div>
+        <nav class="header__nav">
+            <a href="#features">Tính năng</a>
+            <a href="#contact">Liên hệ</a>
+            <a href="/login" class="btn btn--outline">Đăng nhập</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container hero__content">
+        <h1 class="hero__title">Giải pháp số nhanh – gọn – VIP</h1>
+        <p class="hero__subtitle">Tăng tốc dự án của bạn bằng công nghệ và trải nghiệm mượt mà.</p>
+        <a href="/login" class="btn btn--primary hero__btn">Bắt đầu ngay</a>
+    </div>
+</section>
+
+<section class="features" id="features">
+    <div class="container">
+        <h2 class="section-title">Tính năng nổi bật</h2>
+
+        <div class="features__grid">
+            <div class="feature-card">
+                <div class="feature-card__icon">⚡</div>
+                <h3 class="feature-card__title">Nhanh chóng</h3>
+                <p class="feature-card__desc">Tối ưu từng thao tác để đem lại tốc độ vượt trội.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-card__icon">🔒</div>
+                <h3 class="feature-card__title">Bảo mật cao</h3>
+                <p class="feature-card__desc">Hệ thống được bảo vệ bằng chuẩn bảo mật mới nhất.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-card__icon">🎨</div>
+                <h3 class="feature-card__title">Giao diện đẹp</h3>
+                <p class="feature-card__desc">Thiết kế hiện đại, dễ dùng và tùy biến mạnh mẽ.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer" id="contact">
+    <div class="container">
+        <p>© 2025 Nyano Technology. All rights reserved.</p>
+        <p>Hotline: 0900 000 111 — Email: support@nyano.com</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+// --------- variables ----------
+$primary: #4f46e5;
+$primary-dark: #4338ca;
+$bg-gradient: linear-gradient(135deg, #1d2671, #c33764);
+$text-main: #111827;
+$text-muted: #6b7280;
+$border-color: #e5e7eb;
+$shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.35);
+
+// --------- global ----------
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+  color: $text-main;
+}
+
+// --------- layout ----------
+.login-page {
+  min-height: 100vh;
+  background: $bg-gradient;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 420px;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 18px;
+  padding: 32px 28px 28px;
+  box-shadow: $shadow-soft;
+  backdrop-filter: blur(12px);
+}
+
+// --------- text ----------
+.login-title {
+  margin: 0 0 6px;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  color: $primary;
+}
+
+.login-subtitle {
+  margin: 0 0 24px;
+  font-size: 14px;
+  text-align: center;
+  color: $text-muted;
+}
+
+// --------- form ----------
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    font-size: 13px;
+    font-weight: 600;
+    color: $text-main;
+  }
+
+  input {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid $border-color;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.08s ease;
+
+    &::placeholder {
+      color: $text-muted;
+    }
+
+    &:focus {
+      border-color: $primary;
+      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.18);
+      transform: translateY(-1px);
+    }
+  }
+}
+
+// --------- button ----------
+.btn-login {
+  margin-top: 4px;
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 999px;
+  border: none;
+  background: $primary;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: background 0.15s ease, transform 0.08s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    background: $primary-dark;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.35);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+}
+
+// --------- footer ----------
+.login-footer {
+  margin-top: 10px;
+  text-align: center;
+
+  .hint {
+    font-size: 12px;
+    color: $text-muted;
+  }
+}
+
+// --------- responsive ----------
+@media (max-width: 480px) {
+  .login-card {
+    padding: 24px 18px 20px;
+  }
+
+  .login-title {
+    font-size: 20px;
+  }
+}
